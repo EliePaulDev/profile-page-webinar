@@ -1,0 +1,43 @@
+/* 
+selector {
+    properties: value;
+} 
+*/
+
+/*
+    Selector
+        p, h1, h3, div, main
+        #name
+        .bio-header
+
+    Properties
+        width
+        height
+        color
+        background-color
+        font-size
+
+    Values
+        width: 200px
+
+    Units
+        px -> pixels
+        cm -> centimers
+        em -> relative to the parent element
+        rem -> relative to the root (html)
+
+*/
+
+.title {
+    color: red;
+    background-color: blue;
+}
+
+h1 {
+    color: red;
+}
+
+img {
+    width: 200;
+    height: 200;
+}
