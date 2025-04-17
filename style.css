@@ -7,6 +7,14 @@ body {
     margin: 0;
     font-size: 16px;
 }
+/*
+  Grid
+  display: Grid;
+  nav cover first row
+  header cover 2nd row
+  main, aside
+  footer
+*/
 
 .menu {
     display: flex;
@@ -36,8 +44,6 @@ body {
 }
 
 .title {
-
-    background-color: aqua;
     color: blueviolet;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 900;
@@ -53,13 +59,6 @@ body {
     background-color: white;
 }
 
-
-
-img {
-    width: 200;
-    height: 200;
-    border-radius: 50%;
-}
 
 #profile-picture {
     border-radius: 50%;
@@ -99,4 +98,20 @@ footer {
     background-color: #333333;
     color: white;
     font-size: 20px;
+}
+
+@media screen and (max-width: 680px) {
+    .menu {
+        ul {
+            flex-direction: column;
+        }
+    }
+
+    .bio-header {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
 }
