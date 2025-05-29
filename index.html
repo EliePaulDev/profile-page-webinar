@@ -5,17 +5,17 @@
         <meta name="author" content="Elie Paul" />
         <meta name="keywords" content="profile, web, development">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Elie Paul</title>
+        <title>Elie Paul Profile</title>
         <link rel="stylesheet" href="style.css">
-
+        <script src="index.js"></script>
     </head>
-    <body>
+    <body class="container">
         <nav class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button>Try this!</button></li>
+                <li><button class="btn-menu">Try this!</button></li>
             </ul>
         </nav>
         <header class="bio-header">
@@ -29,7 +29,7 @@
             </section>
         </header>
         <main class="content">
-        <section>
+        <section class="main-content">
             <h3 class="title">My background: </h3>
             <ul>
                 <li><span>5 years</span> in Front End Development</li>
@@ -38,6 +38,8 @@
             <p>
                 My name is Elie. Raised in born in Haiti.
             </p>
+
+            <button class="btn" onClick="changeTitleColor('blue')">Change Title Color</button>
 
             <h1 class="title"> My Story </h1>
             <article>
@@ -49,15 +51,15 @@
             </section>
         </section>
        
-        <aside>
+        <aside class="aside-content">
             <ul>
                 <li>Hobbies: Soccer</li>
             </ul>
 
-            <button class="btn"> Submit </button>
+            <button id="submit-btn" class="btn" onclick="alert('Button has been clicked')"> Submit </button>
         </aside>
         </main>
-        <footer>
+        <footer class="footer">
             @copyright 2025
         </footer>
     </body>

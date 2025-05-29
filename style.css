@@ -1,5 +1,6 @@
 html {
-    margin: 0
+    margin: 0;
+    box-sizing: border-box;
 } 
 
 
@@ -16,14 +17,61 @@ body {
   footer
 */
 
+/*
+- css variables
+- css functions
+- css selectors
+*/
+
+/*
+- specific colors (3 main colors, 2 accent colors)
+- theme
+
+*/
+
+:root {
+    --primary-color: blue;
+    --secondary-color: white;
+    --tertiary-color: black;
+    --accent-color-1: rgba(111, 111, 111, 0.8)
+}
+
+
+
+@function --dashedborder() {
+    border: 1px solid black;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "menu menu"
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+
+.hero {
+    height: 80dvh;
+}
+
 .menu {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--primary-color);
+    grid-area: menu;
 
     ul {
         display: flex;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-weight: 500;
-        gap: 20px;
+        font-size: 32px;
+        gap: 50px;
 
         li {
             list-style: none;
@@ -31,11 +79,21 @@ body {
 
         li a {
           text-decoration: none;
+          color: white;
         }
     }
 }
 
+.btn-menu {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    font-size: 32px;
+    padding: 10px;
+}
+
 .bio-header {
+    grid-area: header;
     margin: 20px;
     padding: 20px;
     display: flex;
@@ -51,7 +109,7 @@ body {
 }
 
 #name2 {
-    color: blue;
+    color: var(--primary-color);
 }
 
 #name {
@@ -76,8 +134,16 @@ aside {
     display: flex;
 }
 
+.main-content {
+    grid-area: main;
+}
+
+.aside-content {
+    grid-area: aside;
+}
+
 .btn {
-    background-color: blue;
+    background-color: var(--primary-color);
     color: white;
 
     font-size: 20px;
@@ -100,18 +166,46 @@ footer {
     font-size: 20px;
 }
 
+.footer {
+    grid-area: footer;
+}
+
 @media screen and (max-width: 680px) {
     .menu {
+        height: 400px;
+        gap: 10px;
+        font-size:24px;
         ul {
             flex-direction: column;
+
+            li {
+                border-bottom: 1px solid grey;
+            }
         }
     }
 
     .bio-header {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .content {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 50px;
+    }
+
+    .footer {
+        text-align: center;
     }
 }
